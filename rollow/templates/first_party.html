@@ -1,0 +1,26 @@
+<html>
+<body>
+<h2>Evidence</h2>
+{% for evidence in evidences %}
+==================<br>
+<b>Evidence</b><br>
+{{evidence['evidence_data']}}<br>  
+-------<br>
+<b>Proof</b><br>
+{% for i, level in enumerate(evidence['evidence_hashtree']) %}
+<u>l={{i}}:</u><br> {{level}}{% if i < len(evidence['evidence_hashtree'])-1 %}, {% end %}<br>
+{% end %}
+<br>
+-------<br>
+<b>Block Data (sample)</b><br>
+{<br>
+&nbsp;&nbsp;"cmr": "{{evidence['block_id']['cmr']}}",<br>
+&nbsp;&nbsp;"status": "{{evidence['block_id']['status']}}",<br>
+&nbsp;&nbsp;"root_hash": "{{level[0]}}"<br>
+}<br>
+<br>
+{% end %}
+
+
+</body>
+</html>

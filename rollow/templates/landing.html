@@ -1,0 +1,26 @@
+<html>
+<body>
+<h2>Main Menu</h2>
+Hello {{first_name}} {{last_name}}.<br>
+
+Account ID: {{ account_id }} <br>
+Email address: {{ email }} <br>
+
+================================<br>
+<br>
+<h5>1st-Party Attestations</h5>
+<form method="GET" action="/1st_party">
+  <input type="text" id="match" name="keywords"> <input type="submit" value="Submit">
+</form>
+
+<h5>2nd-Party Attestations</h5>
+<a href="/2nd_party">Show 2nd-Party Attestations</a><br>
+
+<h5>3rd-Party Attestations</h5>
+<a href="/3rd_party">Show 3rd-Party Attestations</a><br>
+
+
+
+
+</body>
+</html>
